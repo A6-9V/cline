@@ -1,0 +1,286 @@
+diff --git a/.changeset/decimal-price-crash-fix.md b/.changeset/decimal-price-crash-fix.md
+deleted file mode 100644
+index bd67f3a..0000000
+--- a/.changeset/decimal-price-crash-fix.md
++++ /dev/null
+@@ -1,5 +0,0 @@
+----
+-"claude-dev": patch
+----
+-
+-Fix decimal input crash in OpenAI Compatible price fields (#8129)
+diff --git a/.changeset/great-hornets-nail.md b/.changeset/great-hornets-nail.md
+deleted file mode 100644
+index 6ad63a1..0000000
+--- a/.changeset/great-hornets-nail.md
++++ /dev/null
+@@ -1,5 +0,0 @@
+----
+-"claude-dev": patch
+----
+-
+-fix: build complete handlers when upadting the api config
+diff --git a/.changeset/silver-oranges-nail.md b/.changeset/silver-oranges-nail.md
+deleted file mode 100644
+index f432273..0000000
+--- a/.changeset/silver-oranges-nail.md
++++ /dev/null
+@@ -1,5 +0,0 @@
+----
+-"claude-dev": patch
+----
+-
+-Fixed missing provider from list
+diff --git a/.changeset/skills-always-enabled.md b/.changeset/skills-always-enabled.md
+deleted file mode 100644
+index bc1592f..0000000
+--- a/.changeset/skills-always-enabled.md
++++ /dev/null
+@@ -1,5 +0,0 @@
+----
+-"claude-dev": patch
+----
+-
+-feat(skills): Make skills always enabled and remove feature toggle setting
+diff --git a/.changeset/ten-coats-rule.md b/.changeset/ten-coats-rule.md
+deleted file mode 100644
+index 80b99ab..0000000
+--- a/.changeset/ten-coats-rule.md
++++ /dev/null
+@@ -1,5 +0,0 @@
+----
+-"claude-dev": patch
+----
+-
+-Fixed Favorite Icon / Star from getting clipped in the task history view
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 07e464c..63e6158 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -1,26 +1,36 @@
+ # Changelog
+
++## 3.56.3
++
++### Patch Changes
++
++- c83b404: Fix decimal input crash in OpenAI Compatible price fields (#8129)
++- 96b4818: fix: build complete handlers when upadting the api config
++- adb3759: Fixed missing provider from list
++- 3b6e42f: feat(skills): Make skills always enabled and remove feature toggle setting
++- 5d94bbc: Fixed Favorite Icon / Star from getting clipped in the task history view
++
+ ## [3.56.0]
+
+ ### Added
+
+-- __CLI authentication:__ Added Vercel AI Gateway and Cline API key provider support for headless CI/automation workflows
+-- __New model:__ Added Kimi-K2.5 model to Moonshot provider (262K context, image support, prompt caching)
+-- __Prompt variant:__ Added Trinity Large prompt variant for improved tool-calling support
+-- __OpenTelemetry:__ Added support for custom headers on metrics and logs endpoints
+-- __Social links:__ Added community icons (X, Discord, GitHub, Reddit, LinkedIn) to the What's New modal
++- **CLI authentication:** Added Vercel AI Gateway and Cline API key provider support for headless CI/automation workflows
++- **New model:** Added Kimi-K2.5 model to Moonshot provider (262K context, image support, prompt caching)
++- **Prompt variant:** Added Trinity Large prompt variant for improved tool-calling support
++- **OpenTelemetry:** Added support for custom headers on metrics and logs endpoints
++- **Social links:** Added community icons (X, Discord, GitHub, Reddit, LinkedIn) to the What's New modal
+
+ ### Fixed
+
+-- __LiteLLM:__ Fixed thinking configuration not appearing for reasoning-capable models
+-- __OpenTelemetry:__ Fixed endpoint path handling (no longer incorrectly appends `/v1/logs` or `/v1/metrics`) and ensured logs are sent regardless of VSCode telemetry settings
+-- __CLI auth:__ Fixed `cline auth` displaying incorrect provider information after configuration
++- **LiteLLM:** Fixed thinking configuration not appearing for reasoning-capable models
++- **OpenTelemetry:** Fixed endpoint path handling (no longer incorrectly appends `/v1/logs` or `/v1/metrics`) and ensured logs are sent regardless of VSCode telemetry settings
++- **CLI auth:** Fixed `cline auth` displaying incorrect provider information after configuration
+
+ ### Changed
+
+-- __Hooks:__ Hook scripts now run from the workspace repository root instead of filesystem root
+-- __Default settings:__ Enabled multi-root workspaces, parallel tool calling, and skills by default; disabled strict plan mode by default
+-- __Settings UI:__ Refreshed feature settings section with collapsible design
++- **Hooks:** Hook scripts now run from the workspace repository root instead of filesystem root
++- **Default settings:** Enabled multi-root workspaces, parallel tool calling, and skills by default; disabled strict plan mode by default
++- **Settings UI:** Refreshed feature settings section with collapsible design
+
+ ## [3.55.0]
+
+@@ -421,7 +431,7 @@
+
+ ## [3.34.0]
+
+-- Cline Teams is now free through 2025 for unlimited users. Includes Jetbrains, RBAC, centralized billing and more.
++- Cline Teams is now free through 2026 for unlimited users. Includes Jetbrains, RBAC, centralized billing and more.
+ - Use the “exacto” versions of GLM-4.6, Kimi-K2, and Qwen3-Coder in the Cline provider for the best balance of cost, speed, accuracy and tool-calling.
+
+ ## [3.33.1]
+diff --git a/LICENSE b/LICENSE
+index 5fb83b3..05ae14a 100644
+--- a/LICENSE
++++ b/LICENSE
+@@ -186,7 +186,7 @@
+       same "printed page" as the copyright notice for easier
+       identification within third-party archives.
+
+-   Copyright 2025 Cline Bot Inc.
++   Copyright 2026 Cline Bot Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+diff --git a/README.md b/README.md
+index 6b26601..31c4150 100644
+--- a/README.md
++++ b/README.md
+@@ -152,4 +152,4 @@ Get the same Cline experience with enterprise-grade controls: SSO (SAML/OIDC), g
+
+ ## License
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+diff --git a/cli/man/cline.1 b/cli/man/cline.1
+index 7ab2cd3..3e76bcf 100644
+--- a/cli/man/cline.1
++++ b/cli/man/cline.1
+@@ -1,6 +1,6 @@
+ .\" Automatically generated by Pandoc 3.8.2
+ .\"
+-.TH "CLINE" "1" "January 2025" "Cline CLI 1.0" "User Commands"
++.TH "CLINE" "1" "February 2026" "Cline CLI 1.0" "User Commands"
+ .SH NAME
+ cline \- orchestrate and interact with Cline AI coding agents
+ .SH SYNOPSIS
+@@ -386,4 +386,4 @@ Full documentation: \c
+ .SH AUTHORS
+ Cline is developed by the Cline Bot Inc.\ and the open source community.
+ .SH COPYRIGHT
+-Copyright © 2025 Cline Bot Inc.\ Licensed under the Apache License 2.0.
++Copyright © 2026 Cline Bot Inc.\ Licensed under the Apache License 2.0.
+diff --git a/cli/man/cline.1.md b/cli/man/cline.1.md
+index 65398e4..9f0204b 100644
+--- a/cli/man/cline.1.md
++++ b/cli/man/cline.1.md
+@@ -3,7 +3,7 @@ title: CLINE
+ section: 1
+ header: User Commands
+ footer: Cline CLI 1.0
+-date: January 2025
++date: February 2026
+ ---
+
+ # NAME
+@@ -391,4 +391,4 @@ Cline is developed by the Cline Bot Inc. and the open source community.
+
+ # COPYRIGHT
+
+-Copyright © 2025 Cline Bot Inc. Licensed under the Apache License 2.0.
++Copyright © 2026 Cline Bot Inc. Licensed under the Apache License 2.0.
+diff --git a/docs/cline-cli/cli-reference.mdx b/docs/cline-cli/cli-reference.mdx
+index 8e71414..0dbd0dd 100644
+--- a/docs/cline-cli/cli-reference.mdx
++++ b/docs/cline-cli/cli-reference.mdx
+@@ -374,7 +374,7 @@ AUTHORS
+        Cline is developed by the Cline Bot Inc. and the open source community.
+
+ COPYRIGHT
+-       Copyright © 2025 Cline Bot Inc. Licensed under the Apache License 2.0.
++       Copyright © 2026 Cline Bot Inc. Licensed under the Apache License 2.0.
+ ```
+
+ ## JSON output (-F json)
+diff --git a/locales/ar-sa/README.md b/locales/ar-sa/README.md
+index 82bff1d..1df1a8e 100644
+--- a/locales/ar-sa/README.md
++++ b/locales/ar-sa/README.md
+@@ -186,4 +186,4 @@
+
+ ## الرخصة
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
+\ No newline at end of file
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+\ No newline at end of file
+diff --git a/locales/de/README.md b/locales/de/README.md
+index 16ab157..33ab6c2 100644
+--- a/locales/de/README.md
++++ b/locales/de/README.md
+@@ -158,5 +158,5 @@ Um zum Projekt beizutragen, beginnen Sie mit unserem [Beitragsleitfaden](CONTRIB
+
+ ## Lizenz
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+
+diff --git a/locales/es/README.md b/locales/es/README.md
+index 0de2960..4cc8b9f 100644
+--- a/locales/es/README.md
++++ b/locales/es/README.md
+@@ -158,4 +158,4 @@ Para contribuir al proyecto, comience con nuestra [guía de contribución](CONTR
+
+ ## Licencia
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+diff --git a/locales/ja/README.md b/locales/ja/README.md
+index 82bad46..f3657c7 100644
+--- a/locales/ja/README.md
++++ b/locales/ja/README.md
+@@ -158,4 +158,4 @@ Clineがタスクを進める中で、拡張機能は各ステップでワーク
+
+ ## ライセンス
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+diff --git a/locales/ko/README.md b/locales/ko/README.md
+index 5bdd0ed..5c53448 100644
+--- a/locales/ko/README.md
++++ b/locales/ko/README.md
+@@ -169,4 +169,4 @@ Cline이 작업을 진행하는 동안 확장 프로그램은 각 단계에서
+
+ ## 라이센스
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](/LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](/LICENSE)
+diff --git a/locales/pt-BR/README.md b/locales/pt-BR/README.md
+index 308b2e1..8dbe00e 100644
+--- a/locales/pt-BR/README.md
++++ b/locales/pt-BR/README.md
+@@ -158,4 +158,4 @@ Para contribuir com o projeto, comece com nosso [Guia de Contribuição](CONTRIB
+
+ ## Licença
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+diff --git a/locales/zh-cn/README.md b/locales/zh-cn/README.md
+index a4d089c..65dcef3 100644
+--- a/locales/zh-cn/README.md
++++ b/locales/zh-cn/README.md
+@@ -158,5 +158,5 @@ Cline 所做的所有更改都会记录在你的文件时间轴中，提供了
+
+ ## 许可证
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+
+diff --git a/locales/zh-tw/README.md b/locales/zh-tw/README.md
+index cfd7490..a47ae8f 100644
+--- a/locales/zh-tw/README.md
++++ b/locales/zh-tw/README.md
+@@ -187,4 +187,4 @@ Cline 可以直接在您的編輯器中建立和編輯檔案，並顯示變更
+
+ ## 授權條款
+
+-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
++[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
+diff --git a/package.json b/package.json
+index 31f5398..d0bb11f 100644
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,7 @@
+	"name": "claude-dev",
+	"displayName": "Cline",
+	"description": "Autonomous coding agent right in your IDE, capable of creating/editing files, running commands, using the browser, and more with your permission every step of the way.",
+-	"version": "3.56.2",
++	"version": "3.56.3",
+	"icon": "assets/icons/icon.png",
+	"engines": {
+		"vscode": "^1.84.0"

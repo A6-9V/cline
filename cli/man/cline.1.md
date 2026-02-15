@@ -3,7 +3,7 @@ title: CLINE
 section: 1
 header: User Commands
 footer: Cline CLI 1.0
-date: January 2025
+date: February 2026
 ---
 
 # NAME
@@ -391,4 +391,4 @@ Cline is developed by the Cline Bot Inc. and the open source community.
 
 # COPYRIGHT
 
-Copyright © 2025 Cline Bot Inc. Licensed under the Apache License 2.0.
+Copyright © 2026 Cline Bot Inc. Licensed under the Apache License 2.0.
